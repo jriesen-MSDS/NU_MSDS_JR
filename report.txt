@@ -1,0 +1,169 @@
+--------------------------------------------------------------------------------
+Processing file 'run-drivetime-v003.py'
+ outputting to 'run_drvt_v3.py'
+--------------------------------------------------------------------------------
+
+'run-drivetime-v003.py' Line 988
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.reset_default_graph' to 'tf.compat.v1.reset_default_graph'
+
+    Old:     tf.reset_default_graph()
+             ~~~~~~~~~~~~~~~~~~~~~~   
+    New:     tf.compat.v1.reset_default_graph()
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   
+
+'run-drivetime-v003.py' Line 989
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.set_random_seed' to 'tf.compat.v1.set_random_seed'
+
+    Old:     tf.set_random_seed(seed)
+             ~~~~~~~~~~~~~~~~~~       
+    New:     tf.compat.v1.set_random_seed(seed)
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~       
+
+'run-drivetime-v003.py' Line 1052
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.placeholder' to 'tf.compat.v1.placeholder'
+
+    Old:         X = tf.placeholder(tf.float32, shape=(None, n_inputs), name="X")
+                     ~~~~~~~~~~~~~~                                               
+    New:         X = tf.compat.v1.placeholder(tf.float32, shape=(None, n_inputs), name="X")
+                     ~~~~~~~~~~~~~~~~~~~~~~~~                                               
+
+'run-drivetime-v003.py' Line 1053
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.placeholder' to 'tf.compat.v1.placeholder'
+
+    Old:         y = tf.placeholder(tf.int64, shape=(None), name="y")
+                     ~~~~~~~~~~~~~~                                   
+    New:         y = tf.compat.v1.placeholder(tf.int64, shape=(None), name="y")
+                     ~~~~~~~~~~~~~~~~~~~~~~~~                                   
+
+'run-drivetime-v003.py' Line 1054
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.placeholder_with_default' to 'tf.compat.v1.placeholder_with_default'
+
+    Old:         training = tf.placeholder_with_default(False, shape=(), 
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~                   
+    New:         training = tf.compat.v1.placeholder_with_default(False, shape=(), 
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                   
+
+'run-drivetime-v003.py' Line 1061
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.layers.batch_normalization' to 'tf.compat.v1.layers.batch_normalization'
+
+    Old:                     tf.layers.batch_normalization,
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+    New:                     tf.compat.v1.layers.batch_normalization,
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+
+'run-drivetime-v003.py' Line 1066
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+
+    Old:                     tf.layers.dense,
+                             ~~~~~~~~~~~~~~~  
+    New:                     tf.compat.v1.layers.dense,
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~  
+
+'run-drivetime-v003.py' Line 1079
+--------------------------------------------------------------------------------
+
+Added keyword 'input_tensor' to reordered function 'tf.reduce_mean'
+
+    Old:             loss = tf.reduce_mean(xentropy, name="loss")
+                                                                  
+    New:             loss = tf.reduce_mean(input_tensor=xentropy, name="loss")
+                                           ~~~~~~~~~~~~~                       
+
+'run-drivetime-v003.py' Line 1082
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.train.GradientDescentOptimizer' to 'tf.compat.v1.train.GradientDescentOptimizer'
+
+    Old:             optimizer = tf.train.GradientDescentOptimizer(learning_rate)
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+    New:             optimizer = tf.compat.v1.train.GradientDescentOptimizer(learning_rate)
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                
+
+'run-drivetime-v003.py' Line 1086
+--------------------------------------------------------------------------------
+
+Added keyword 'predictions' to reordered function 'tf.nn.in_top_k'
+Added keyword 'targets' to reordered function 'tf.nn.in_top_k'
+Added keyword 'k' to reordered function 'tf.nn.in_top_k'
+
+    Old:             correct = tf.nn.in_top_k(logits, y, 1)
+                                                            
+    New:             correct = tf.nn.in_top_k(predictions=logits, targets=y, k=1)
+                                              ~~~~~~~~~~~~        ~~~~~~~~   ~~   
+
+'run-drivetime-v003.py' Line 1087
+--------------------------------------------------------------------------------
+
+Added keyword 'input_tensor' to reordered function 'tf.reduce_mean'
+
+    Old:             accuracy = tf.reduce_mean(tf.cast(correct, tf.float32))
+                                                                             
+    New:             accuracy = tf.reduce_mean(input_tensor=tf.cast(correct, tf.float32))
+                                               ~~~~~~~~~~~~~                              
+
+'run-drivetime-v003.py' Line 1089
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+
+    Old:         init = tf.global_variables_initializer()
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   
+    New:         init = tf.compat.v1.global_variables_initializer()
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   
+
+'run-drivetime-v003.py' Line 1090
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+
+    Old:         saver = tf.train.Saver()     
+                         ~~~~~~~~~~~~~~        
+    New:         saver = tf.compat.v1.train.Saver()     
+                         ~~~~~~~~~~~~~~~~~~~~~~~~        
+
+'run-drivetime-v003.py' Line 1092
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.Session' to 'tf.compat.v1.Session'
+
+    Old:         with tf.Session() as sess:
+                      ~~~~~~~~~~            
+    New:         with tf.compat.v1.Session() as sess:
+                      ~~~~~~~~~~~~~~~~~~~~            
+
+'run-drivetime-v003.py' Line 1128
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.Session' to 'tf.compat.v1.Session'
+
+    Old: with tf.Session() as sess:
+              ~~~~~~~~~~            
+    New: with tf.compat.v1.Session() as sess:
+              ~~~~~~~~~~~~~~~~~~~~            
+
+'run-drivetime-v003.py' Line 1145
+--------------------------------------------------------------------------------
+
+Added keyword 'input' to reordered function 'tf.argmax'
+Added keyword 'axis' to reordered function 'tf.argmax'
+
+    Old:             prediction = tf.argmax(logits, 1)
+                                                       
+    New:             prediction = tf.argmax(input=logits, axis=1)
+                                            ~~~~~~        ~~~~~   
+
+
